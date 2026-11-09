@@ -6,7 +6,7 @@
 ## 준비 (5분)
 
 1. 터미널에서 `node -v`를 실행한다. 버전이 나오면 된다. 안 나오면 nodejs.org에서 LTS 버전을 설치한다.
-2. 개인 GitHub에 `playwright-by-hand` repo를 만들고 `C:\Users\labje\personal\`에 clone한 뒤 `w1-js-basics/` 폴더를 만든다.
+2. repo `C:\Users\labje\Desktop\playwright-by-hand` 안에 `w1-js-basics/` 폴더를 만든다. (repo 생성과 GitHub 연결은 끝남)
 3. **VS Code의 AI 자동완성을 끈다.** Copilot이나 Claude 확장이 있다면 이 폴더에서는 비활성화한다. 오늘부터 손으로 친다.
 
 ## 개념 (10분)
@@ -65,7 +65,7 @@ count = count + 1;
 console.log(`${name}: ${count}`);
 ```
 
-내 예측:
+내 예측: admin: 2
 
 **Q2.** 무엇이 출력될까? (에러가 날 수도 있다)
 
@@ -75,7 +75,7 @@ role = 'admin';
 console.log(role);
 ```
 
-내 예측:
+내 예측: user
 
 **Q3.** 두 줄은 각각 무엇을 출력할까?
 
@@ -85,7 +85,8 @@ console.log(greet('QA'));
 console.log(greet);
 ```
 
-내 예측:
+내 예측: Hi, QA
+Hi, 
 
 ## 손으로 치기 (30분)
 
@@ -109,21 +110,23 @@ Q1부터 Q3까지 직접 쳐서 `node d1-hello.js`로 실행하고 예측과 비
 ### 과제 3. 고장 내기
 
 1. `passRate` 안의 `return`을 지우면 무엇이 출력될까? **먼저 예측하고** 실행한다.
-   - 내 예측:
-   - 실제 결과:
+   - 내 예측: Error 날 것 같은데
+   - 실제 결과: undefined
 2. `passRate(0, 0)`은 무엇을 출력할까? 예측하고 실행한 뒤, **이 경계값을 어떻게 처리할지** 정해서 고친다.
-   - 내 예측:
-   - 실제 결과:
-   - 처리 방법:
+   - 내 예측: 0으로 나눌 수 없다는 Error 가 나올 것 같다.
+   - 실제 결과: NaN
+   - 처리 방법: if(total == 0){
+        console.log('0으로 나눌 수 없습니다.');
+    } 이거 넣었어요
 
 ## 설명하기 (10분)
 
 내 말로 답한다. 정답처럼 쓰지 않아도 된다.
 
-1. `const`와 `let`은 어떻게 다르고, 언제 무엇을 쓰나?
-2. `greet`와 `greet('QA')`는 무엇이 다른가?
-3. `passRate(0, 0)`은 왜 그런 결과가 나왔고, 어떻게 막았나?
-4. `test('로그인', async ({ page }) => { ... });`에서 **오늘 배운 것으로 알아볼 수 있는 부분**은 어디인가?
+1. `const`와 `let`은 어떻게 다르고, 언제 무엇을 쓰나? -> const 는 다른 값의 대입을 막고 let 은 허용한다. const 는 변하지 않아야 하는 값에 사용하고 let 은 변화가능한 값에 사용한다.
+2. `greet`와 `greet('QA')`는 무엇이 다른가? -> greet 는 함수 식 전체를 의미하며, greet('QA')는 greet 함수에 'QA' 값을 넣었을 때의 결과인 return 값을 출력한다.
+3. `passRate(0, 0)`은 왜 그런 결과가 나왔고, 어떻게 막았나? -> 0이 분모로 들어가서 계산될 수 없으므로 NaN 으로 뜬거 같은데, 막는 방법은 모르겠다.
+4. `test('로그인', async ({ page }) => { ... });`에서 **오늘 배운 것으로 알아볼 수 있는 부분**은 어디인가? -> test() 함수에 '로그인' 이라는 input 을 넣은 것 같고, async도.. 함수인가?
 
 ## 기록 (5분)
 
