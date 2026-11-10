@@ -46,13 +46,14 @@ const passed = results.filter((n) => n.passed).length
 console.log(passed)
 
 //4. W1D1 의 passRate 복사하여 통과율 구하기
-function passRate(passed, total){
+/*function passRate(passed, total){
     if(total === 0){
         return '0.0%'; // NaN 으로 나오는 값을 아예 치환해줬어요.
     }
     return (passed/total * 100).toFixed(1)+'%';
 }
 console.log(passRate(passed, results.length));
+d3 과제 1번으로 주석 처리함*/
 
 //과제 3. passRate 이상 입력 막기
 function passRate(passed, total){
