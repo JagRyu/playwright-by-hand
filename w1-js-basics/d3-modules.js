@@ -12,5 +12,5 @@ console.log(passRate(passedCount, results.length));
 console.log(results.map(({id, passed}) => formatResult(id, passed)))
 
 // 과제 3.3 d3-modules.js 맨 아래에 두 줄을 넣으면 둘째 줄이 출력될까?
-console.log(passRate(-1, 5));
-console.log('이 줄은 실행될까?');
+//console.log(passRate(-1, 5));
+//console.log('이 줄은 실행될까?');
