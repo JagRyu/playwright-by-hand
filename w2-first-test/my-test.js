@@ -1,7 +1,7 @@
 function myTest(name, fn) {
-  console.log(`[${name}] 시작: 탭을 만든다`);
   const obj = { page: '새 브라우저 탭', browserName: 'chromium' };   // ① 객체를 만든다
   fn(obj);                                                          // ② 내 함수를 부르면서 그 객체를 넣는다
+  console.log(`[${name}] 시작: 탭을 만든다`);
   console.log(`[${name}] 끝: 탭을 닫는다`);
 }
 
