@@ -8,11 +8,10 @@ test('장바구니 담기', async({page})=> {
     await expect(page).toHaveURL(/inventory/);
     await expect(page.getByText('Products')).toBeVisible();
 
-    //await page.getByRole('button', { name: 'Add to cart' }).click();
-    await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
-    await expect(page.locator('[data-test="remove-sauce-labs-backpack"]')).toBeVisible();
+    await page.getByTestId('add-to-cart-sauce-labs-backpack').click();
+    await expect(page.getByTestId('remove-sauce-labs-backpack')).toBeVisible();
 
-    await page.locator('[data-test="shopping-cart-link"]').click();
+    await page.getByTestId('shopping-cart-link').click();
     await expect(page).toHaveURL(/cart/);
     await expect(page.getByText('Sauce Labs Backpack')).toBeVisible();
 
