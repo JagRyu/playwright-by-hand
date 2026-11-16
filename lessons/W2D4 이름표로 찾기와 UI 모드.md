@@ -27,7 +27,6 @@
 ① getByPlaceholder
 ② locator
 ③ locator, getByText -> title 이라는 명칭은 흔하게 널리 쓰일 것 같은 이름이라 getByText로 'Products' 까지 확정지어 준다면 바로 찾을 것 같다.
-**아니 그리고, 좀 개념이라도 알려주고 워밍업 문제 좀 내주세요. 아예 모르는거에 답을 적으라고 하니 5분이 아니라 거의 15분은 걸리잖아요
 
 ## 개념 (10분)
 
