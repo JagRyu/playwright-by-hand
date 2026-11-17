@@ -11,7 +11,7 @@ test('결제 - 이름 비움', async({page}) => {
     await expect(page).toHaveURL(/checkout-step-one/)
 
     await page.getByRole('button', {name: "Continue"}).click();
-    await expect(page.getByText('Error: First name is required')).toBeVisible();
+    await expect(page.getByText('Error: First Name is required', {exact:true})).toBeVisible();
 });
 
 test('결제 - 정보 입력', async({page})=>{
