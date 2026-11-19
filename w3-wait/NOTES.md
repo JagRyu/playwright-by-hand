@@ -37,3 +37,17 @@
     - `click()`, `toBeVisible()` 처럼 괄호를 쓰는 메서드에 어떤 옵션을 넣을 수 있는지 모르겠다.
 - 📌 미룬 것:
     - Q3의 이 무엇을 적으라는 건지 몰라 비워 뒀다. -> 칸 세 개(통과/실패, 시간, 메시지)를 채우는 문제였다.
+
+## W3D3 글자가 바뀔 때까지 기다리는 확인 (2026-11-19 · 소요 ?분)
+- 이해도: 예측 ○ · 고장 ○ · 변형 ○ · 설명 ○  (○ 됨 / △ 반쯤 / ✕ 안 됨)
+- ✅ 알게 된 것:
+    - 괄호 안 `{ }` 에서 `Ctrl + Space` 를 누르면 넣을 수 있는 옵션 목록이 뜬다. (`toHaveText` 는 `ignoreCase`, `signal`, `timeout`, `useInnerText`)
+    - `toHaveText` 는 글자 전체가 같아야 통과한다. `toHaveText('Save')` 는 `Expected: "Save"` / `Received: "Saved"` 로 실패했다.
+- 🧱 막힌 곳 → 푼 방법:
+    - 없음
+- ❓ 아직 모르겠는 것:
+    - `getByText('Save', { exact: true })` 로 찾는 것과 `toHaveText('Save')` 로 확인하는 것이 어떻게 다른지 아직 헷갈린다.
+    - `await` 를 `expect` 앞에 붙일 때와 `textContent()` 앞에 붙일 때가 어떻게 다른지 아직 헷갈린다.
+    - `isVisible()`, `toBeVisible()`, `toBe()` 처럼 확인에 쓰는 메서드를 아직 잘 구분하지 못하겠다.
+- 📌 미룬 것:
+    - `expect(page.getByTestId(...)).toHaveText(...)` 같은 구조는 코드를 더 많이 써 봐야 익숙해질 것 같다.
