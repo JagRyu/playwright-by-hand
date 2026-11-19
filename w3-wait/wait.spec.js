@@ -2,6 +2,7 @@ import {test, expect} from '@playwright/test';
 
 const html = `<button onclick="setTimeout(() => document.body.insertAdjacentHTML('beforeend', '<p>Saved</p>'), 2000)">Save</button>`;
 
+
 test('저장 - 기다리는 확인', async({page})=>{
     await page.setContent(html);
     await page.getByRole('button', {name: 'Save'}).click();
