@@ -6,9 +6,9 @@ test('느린 로그인 - 상품 화면', async({page})=>{
     await page.getByPlaceholder('Password').fill('secret_sauce');
     await page.getByRole('button', {name: 'Login'}).click();
     //await expect(page.getByRole('button', {name: 'Login'})).toBeHidden();
-    await expect(page.getByRole('button', {name: 'Login'})).toBeHidden({timeout: 10000});
+    //await expect(page.getByRole('button', {name: 'Login'})).toBeHidden({timeout: 10000});
     //await expect(page.getByText('Products')).toBeVisible()
-
+    await expect(page.getByText('Products')).toBeVisible({ timeout: 10000 });
 })
 
 test('로그인 후 - 로그인 버튼 사라짐', async({page})=>{
